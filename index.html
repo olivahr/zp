@@ -52,7 +52,7 @@ body::after{
   content:"";
   position:fixed;
   inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.85));
+  background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.9));
   z-index:-1;
 }
 
@@ -106,10 +106,11 @@ nav a:hover{opacity:1}
   50%{transform:translateY(-16px)}
 }
 .hero p{
-  max-width:720px;
+  max-width:760px;
   margin:24px auto;
   font-size:20px;
-  opacity:.92;
+  line-height:1.6;
+  opacity:.95;
 }
 .hero a{
   display:inline-block;
@@ -126,7 +127,7 @@ nav a:hover{opacity:1}
 .section{
   max-width:1100px;
   margin:auto;
-  padding:90px 20px;
+  padding:100px 20px;
   opacity:0;
   transform:translateY(40px);
   transition:1s ease;
@@ -140,8 +141,8 @@ nav a:hover{opacity:1}
   margin-bottom:25px;
 }
 .section p{
-  line-height:1.6;
-  opacity:.9;
+  line-height:1.7;
+  opacity:.92;
 }
 
 /* ===== CARDS ===== */
@@ -153,7 +154,7 @@ nav a:hover{opacity:1}
 }
 .card{
   background:rgba(255,255,255,.06);
-  padding:30px;
+  padding:32px;
   border-radius:22px;
   backdrop-filter:blur(10px);
   transition:.4s;
@@ -165,25 +166,11 @@ nav a:hover{opacity:1}
 
 /* ===== GUARANTEE ===== */
 .guarantee{
-  background:rgba(0,200,255,.08);
+  background:rgba(0,200,255,.1);
   border:1px solid rgba(0,200,255,.35);
-  padding:35px;
-  border-radius:22px;
-}
-
-/* ===== REVIEWS ===== */
-.reviews{
-  display:flex;
-  gap:20px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-}
-.review{
-  min-width:280px;
-  scroll-snap-align:start;
-  background:rgba(255,255,255,.05);
-  padding:25px;
-  border-radius:18px;
+  padding:40px;
+  border-radius:24px;
+  margin-top:40px;
 }
 
 /* ===== WHATSAPP ===== */
@@ -218,8 +205,8 @@ nav a:hover{opacity:1}
   <strong>ZenSite</strong>
   <nav>
     <a href="index.html">Inicio</a>
-    <a href="demo.html">Demo</a>
-    <a href="planes.html">Planes</a>
+    <a href="demo.html">Demos</a>
+    <a href="planes.html">Servicios</a>
   </nav>
 </header>
 
@@ -227,49 +214,39 @@ nav a:hover{opacity:1}
   <div>
     <h1>ZenSite</h1>
     <p>
-      ¿Quieres llevar tu negocio al próximo nivel?<br>
-      Creamos webs premium diseñadas para generar confianza
-      y vender por ti 24/7.
+      Diseñamos experiencias web profesionales enfocadas en generar confianza,
+      posicionar tu marca y convertir visitas en clientes reales.
     </p>
-    <a class="btn-main" href="demo.html">Ver demos</a>
-    <a class="btn-outline" href="planes.html">Ver planes</a>
+    <a class="btn-main" href="planes.html">Ver servicios</a>
+    <a class="btn-outline" href="demo.html">Ver trabajos</a>
   </div>
 </section>
 
 <section class="section">
-<h2>Por qué ZenSite</h2>
+<h2>¿Por qué elegir ZenSite?</h2>
 <div class="cards">
-  <div class="card">🚀 Diseño enfocado en conversión</div>
-  <div class="card">📱 Optimización total para móvil</div>
-  <div class="card">🎯 Marca profesional y confiable</div>
+  <div class="card">🚀 Diseño pensado para vender, no solo verse bonito</div>
+  <div class="card">📱 Experiencia perfecta en celular y laptop</div>
+  <div class="card">🎯 Marca profesional que genera confianza</div>
 </div>
 </section>
 
 <section class="section">
 <h2>Cómo trabajamos</h2>
 <div class="cards">
-  <div class="card">1️⃣ Analizamos tu idea</div>
-  <div class="card">2️⃣ Diseñamos tu web</div>
-  <div class="card">3️⃣ Entregamos lista para vender</div>
+  <div class="card">1️⃣ Analizamos tu negocio y objetivos</div>
+  <div class="card">2️⃣ Diseñamos una web clara y efectiva</div>
+  <div class="card">3️⃣ Entregamos lista para atraer clientes</div>
 </div>
 </section>
 
 <section class="section">
-<h2>Garantía ZenSite</h2>
+<h2>Nuestra garantía</h2>
 <div class="guarantee">
-✔ Web 100% tuya<br>
-✔ Sin pagos ocultos<br>
-✔ Ajustes incluidos<br>
-✔ Soporte directo por WhatsApp
-</div>
-</section>
-
-<section class="section">
-<h2>Opiniones reales</h2>
-<div class="reviews">
-  <div class="review">⭐⭐⭐⭐⭐ Carlos M.<br>“Ahora sí parezco una marca seria.”</div>
-  <div class="review">⭐⭐⭐⭐⭐ Andrea R.<br>“Valió cada dólar.”</div>
-  <div class="review">⭐⭐⭐⭐⭐ Luis G.<br>“Mis clientes confían más.”</div>
+✔ Web 100% tuya, sin pagos mensuales ocultos<br>
+✔ Ajustes incluidos hasta que quedes satisfecho<br>
+✔ Optimización total para móvil y velocidad<br>
+✔ Comunicación directa y soporte humano
 </div>
 </section>
 
