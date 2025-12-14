@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZenSite | Demos</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Segoe UI,Arial,sans-serif;
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ===== LOADER ===== */
+#loader{
+  position:fixed;
+  inset:0;
+  background:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+#loader span{
+  font-size:38px;
+  font-weight:900;
+  color:#00cfff;
+  animation:pulse 1.4s infinite;
+}
+@keyframes pulse{
+  0%,100%{opacity:.3}
+  50%{opacity:1}
+}
+
+/* ===== BACKGROUND DESKTOP ===== */
+@media(min-width:769px){
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:url('background.png') center/cover no-repeat;
+    z-index:-2;
+  }
+}
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.85));
+  z-index:-1;
+}
+
+/* ===== MOBILE HERO IMAGE ===== */
+.mobile-hero{display:none}
+@media(max-width:768px){
+  .mobile-hero{
+    display:block;
+    padding:20px;
+    text-align:center;
+  }
+  .mobile-hero img{
+    width:100%;
+    max-width:420px;
+    border-radius:20px;
+  }
+}
+
+/* ===== HEADER ===== */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 30px;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:600;
+  opacity:.85;
+}
+nav a:hover{opacity:1}
+
+/* ===== MAIN ===== */
+main{
+  padding:100px 20px 60px;
+  text-align:center;
+}
+
+/* ===== SLIDER ===== */
+.slider{
+  max-width:1100px;
+  margin:0 auto;
+  overflow:hidden;
+  border-radius:22px;
+}
+.slides{
+  display:flex;
+  transition:transform 1.2s ease;
+}
+.slides img{
+  width:100%;
+  min-height:420px;
+  max-height:520px;
+  object-fit:contain;
+  background:#000;
+}
+@media(max-width:768px){
+  .slides img{
+    min-height:260px;
+    max-height:320px;
+  }
+}
+
+/* ===== REVIEWS SLIDER ===== */
+.reviews{
+  max-width:900px;
+  margin:90px auto 0;
+}
+.reviews h2{
+  margin-bottom:25px;
+}
+.reviews-track{
+  display:flex;
+  transition:transform 1s ease;
+}
+.review{
+  min-width:100%;
+  background:rgba(255,255,255,.05);
+  padding:28px;
+  border-radius:18px;
+  color:#ddd;
+}
+.review span{
+  display:block;
+  margin-top:12px;
+  font-weight:700;
+  color:#fff;
+}
+
+/* ===== BACK BUTTON ===== */
+.back{
+  display:inline-block;
+  margin-bottom:30px;
+  color:#00cfff;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  color:#fff;
+  text-decoration:none;
+  z-index:3000;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loader"><span>ZenSite</span></div>
+
+<div class="mobile-hero">
+  <img src="background.png" alt="ZenSite demo">
+</div>
+
+<header>
+  <strong>ZenSite</strong>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="planes.html">Planes</a>
+  </nav>
+</header>
+
+<main>
+
+<a class="back" href="index.html">⬅ Volver</a>
+
+<div class="slider">
+  <div class="slides" id="slides">
+    <img src="demo1.png">
+    <img src="demo2.png">
+    <img src="demo3.png">
+    <img src="demo4.png">
+    <img src="demo5.png">
+  </div>
+</div>
+
+<section class="reviews">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="reviews-track" id="reviews">
+    <div class="review">“El diseño quedó brutal y profesional.”<span>— Carlos M.</span></div>
+    <div class="review">“Mi web ahora transmite confianza.”<span>— Andrea R.</span></div>
+    <div class="review">“Rápidos, claros y muy finos.”<span>— Luis G.</span></div>
+    <div class="review">“Valió cada dólar.”<span>— María P.</span></div>
+  </div>
+</section>
+
+</main>
+
+<a class="whatsapp" href="https://wa.me/15027942412?text=Hola%2C%20vi%20los%20demos%20de%20ZenSite%20y%20quiero%20una%20web%20así" target="_blank">💬</a>
+
+<script>
+/* Loader */
+window.onload=()=>document.getElementById("loader").style.display="none";
+
+/* Demo slider */
+let i=0;
+const slides=document.getElementById("slides");
+setInterval(()=>{
+  i=(i+1)%5;
+  slides.style.transform=`translateX(-${i*100}%)`;
+},4500);
+
+/* Reviews slider */
+let r=0;
+const reviews=document.getElementById("reviews");
+setInterval(()=>{
+  r=(r+1)%4;
+  reviews.style.transform=`translateX(-${r*100}%)`;
+},5000);
+</script>
+
+</body>
+</html>
