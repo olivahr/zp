@@ -3,40 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZenSite | Planes</title>
+<title>ZenSite | Servicios</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
 body{
   font-family:Segoe UI,Arial,sans-serif;
   background:#000;
   color:#fff;
-  overflow-x:hidden;
 }
 
-/* ===== LOADER ===== */
-#loader{
-  position:fixed;
-  inset:0;
-  background:#000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-}
-#loader span{
-  font-size:38px;
-  font-weight:900;
-  color:#00cfff;
-  animation:pulse 1.4s infinite;
-}
-@keyframes pulse{
-  0%,100%{opacity:.3}
-  50%{opacity:1}
-}
-
-/* ===== BACKGROUND DESKTOP ===== */
+/* FONDO */
 @media(min-width:769px){
   body::before{
     content:"";
@@ -50,141 +27,126 @@ body::after{
   content:"";
   position:fixed;
   inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.9));
+  background:linear-gradient(180deg,rgba(0,0,0,.65),rgba(0,0,0,.9));
   z-index:-1;
 }
 
-/* ===== MOBILE HERO IMAGE ===== */
-.mobile-hero{display:none}
-@media(max-width:768px){
-  .mobile-hero{
-    display:block;
-    padding:20px;
-    text-align:center;
-  }
-  .mobile-hero img{
-    width:100%;
-    max-width:420px;
-    border-radius:20px;
-  }
-}
-
-/* ===== HEADER ===== */
+/* HEADER */
 header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 30px;
+  padding:20px 30px;
 }
 nav a{
   color:#fff;
   text-decoration:none;
   margin-left:20px;
   font-weight:600;
-  opacity:.85;
 }
-nav a:hover{opacity:1}
 
-/* ===== MAIN ===== */
+/* MAIN */
 main{
-  padding:110px 20px 80px;
+  max-width:1100px;
+  margin:auto;
+  padding:120px 20px 90px;
   text-align:center;
 }
 
-/* ===== TITLE ===== */
-main h1{
-  font-size:clamp(40px,6vw,70px);
-  text-shadow:0 0 25px rgba(0,200,255,.6);
-  margin-bottom:20px;
+/* TITLES */
+h1{
+  font-size:clamp(38px,6vw,68px);
+  margin-bottom:25px;
 }
-main p.subtitle{
-  max-width:720px;
-  margin:0 auto 60px;
-  font-size:19px;
-  opacity:.9;
+.subtitle{
+  max-width:800px;
+  margin:0 auto 80px;
+  font-size:20px;
+  line-height:1.7;
+  opacity:.95;
 }
 
-/* ===== CARDS ===== */
+/* CARDS */
 .cards{
-  max-width:1100px;
-  margin:0 auto;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+  gap:35px;
 }
 .card{
-  background:rgba(255,255,255,.06);
-  padding:35px 30px;
-  border-radius:24px;
-  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,.07);
+  padding:40px 32px;
+  border-radius:28px;
   transition:.45s;
-  position:relative;
 }
 .card:hover{
-  transform:translateY(-14px) scale(1.03);
-  box-shadow:0 0 35px rgba(0,200,255,.45);
+  transform:translateY(-14px);
+  box-shadow:0 0 40px rgba(0,200,255,.45);
 }
 .card h2{
   font-size:28px;
 }
 .price{
-  font-size:38px;
+  font-size:42px;
   color:#00cfff;
-  margin:15px 0;
+  margin:18px 0;
+}
+.card p{
+  font-size:18px;
+  line-height:1.6;
+  opacity:.95;
 }
 .card ul{
   list-style:none;
-  margin:25px 0;
+  margin:28px 0;
   text-align:left;
 }
 .card ul li{
-  margin:12px 0;
-  opacity:.9;
+  margin:14px 0;
 }
 .card ul li::before{
   content:"✔ ";
   color:#00cfff;
 }
 
-/* ===== CTA BUTTON ===== */
+/* CTA */
 .card a{
   display:inline-block;
-  margin-top:15px;
-  padding:12px 26px;
+  margin-top:22px;
+  padding:14px 32px;
   border-radius:30px;
   background:#00cfff;
   color:#000;
   text-decoration:none;
-  font-weight:700;
+  font-weight:800;
 }
 
-/* ===== GUARANTEE ===== */
+/* GUARANTEE */
 .guarantee{
-  max-width:900px;
-  margin:90px auto 0;
-  background:rgba(0,200,255,.08);
+  margin-top:100px;
+  background:rgba(0,200,255,.1);
   border:1px solid rgba(0,200,255,.35);
-  padding:40px;
-  border-radius:24px;
+  padding:45px;
+  border-radius:30px;
+  text-align:left;
 }
 .guarantee h3{
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 .guarantee p{
-  opacity:.9;
-  line-height:1.6;
+  font-size:19px;
+  line-height:1.7;
 }
 
-/* ===== BACK BUTTON ===== */
+/* BACK */
 .back{
   display:inline-block;
-  margin-bottom:40px;
+  margin-top:70px;
   color:#00cfff;
   text-decoration:none;
   font-weight:700;
 }
 
-/* ===== WHATSAPP ===== */
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   bottom:22px;
@@ -199,48 +161,43 @@ main p.subtitle{
   font-size:30px;
   color:#fff;
   text-decoration:none;
-  z-index:3000;
 }
 </style>
 </head>
 
 <body>
 
-<div id="loader"><span>ZenSite</span></div>
-
-<div class="mobile-hero">
-  <img src="background.png" alt="ZenSite">
-</div>
-
 <header>
   <strong>ZenSite</strong>
   <nav>
     <a href="index.html">Inicio</a>
-    <a href="demo.html">Demo</a>
+    <a href="demo.html">Trabajos</a>
   </nav>
 </header>
 
 <main>
 
-<a class="back" href="index.html">⬅ Volver</a>
-
-<h1>Planes ZenSite</h1>
+<h1>Nuestros servicios</h1>
 <p class="subtitle">
-Elige el plan ideal para tu negocio.  
-Diseños profesionales, optimizados para vender y crecer.
+En ZenSite no solo diseñamos páginas web.
+Creamos herramientas digitales pensadas para posicionar tu marca,
+generar confianza y ayudarte a vender de forma profesional.
 </p>
 
-<div class="cards">
+<section class="cards">
 
 <div class="card">
   <h2>Z</h2>
   <div class="price">$180</div>
+  <p>
+  Ideal para negocios que necesitan presencia profesional clara y efectiva.
+  </p>
   <ul>
-    <li>Home Page profesional</li>
-    <li>Diseño moderno y rápido</li>
-    <li>Optimizada para móvil</li>
-    <li>Botón de contacto</li>
-    <li>Web 100% tuya</li>
+    <li>Home page moderna y profesional</li>
+    <li>Diseño optimizado para celular</li>
+    <li>Botón de contacto directo</li>
+    <li>Carga rápida y limpia</li>
+    <li>Web completamente tuya</li>
   </ul>
   <a href="https://wa.me/15027942412?text=Hola%2C%20quiero%20el%20plan%20Z%20de%20ZenSite" target="_blank">Contratar</a>
 </div>
@@ -248,12 +205,16 @@ Diseños profesionales, optimizados para vender y crecer.
 <div class="card">
   <h2>Z+</h2>
   <div class="price">$320</div>
+  <p>
+  Pensado para empresas que necesitan explicar bien sus servicios
+  y ofrecer una experiencia más completa al cliente.
+  </p>
   <ul>
     <li>Web de 3 a 5 páginas</li>
-    <li>Sección de reservas</li>
-    <li>Formulario de contacto</li>
-    <li>Optimización SEO básica</li>
-    <li>Soporte directo</li>
+    <li>Estructura profesional</li>
+    <li>Sección de contacto y reservas</li>
+    <li>Diseño coherente y sólido</li>
+    <li>Soporte durante el proceso</li>
   </ul>
   <a href="https://wa.me/15027942412?text=Hola%2C%20quiero%20el%20plan%20Z%2B%20de%20ZenSite" target="_blank">Contratar</a>
 </div>
@@ -261,35 +222,38 @@ Diseños profesionales, optimizados para vender y crecer.
 <div class="card">
   <h2>Z Premium</h2>
   <div class="price">$580</div>
+  <p>
+  La solución completa para negocios que quieren vender online
+  y escalar su marca.
+  </p>
   <ul>
-    <li>Tienda online completa</li>
-    <li>Carrito y pagos</li>
+    <li>Tienda online profesional</li>
+    <li>Carrito y pagos integrados</li>
     <li>Inventario de productos</li>
-    <li>Panel de gestión</li>
+    <li>Panel de administración</li>
     <li>Negocio listo para vender</li>
   </ul>
   <a href="https://wa.me/15027942412?text=Hola%2C%20quiero%20el%20plan%20Z%20Premium%20de%20ZenSite" target="_blank">Contratar</a>
 </div>
 
-</div>
+</section>
 
-<div class="guarantee">
+<section class="guarantee">
 <h3>Garantía ZenSite</h3>
 <p>
-✔ Web 100% tuya, sin pagos mensuales ocultos.<br>
-✔ Ajustes incluidos hasta que quedes satisfecho.<br>
-✔ Optimización para móvil y velocidad.<br>
-✔ Soporte directo y humano por WhatsApp.
+✔ La web es 100% tuya, sin pagos mensuales ni dependencias.<br>
+✔ Ajustes incluidos hasta que el resultado sea profesional y correcto.<br>
+✔ Diseño optimizado para móvil, velocidad y claridad.<br>
+✔ Comunicación directa y soporte humano real.<br>
+✔ No usamos plantillas genéricas, cada web se trabaja con intención.
 </p>
-</div>
+</section>
+
+<a class="back" href="index.html">⬅ Volver al inicio</a>
 
 </main>
 
-<a class="whatsapp" href="https://wa.me/15027942412?text=Hola%2C%20vi%20los%20planes%20de%20ZenSite%20y%20quiero%20más%20info" target="_blank">💬</a>
-
-<script>
-window.onload=()=>document.getElementById("loader").style.display="none";
-</script>
+<a class="whatsapp" href="https://wa.me/15027942412?text=Hola%2C%20quiero%20más%20info%20sobre%20los%20servicios%20de%20ZenSite" target="_blank">💬</a>
 
 </body>
 </html>
